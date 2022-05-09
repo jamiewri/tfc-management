@@ -43,6 +43,46 @@ workspaces = [
         access = "read"
       }
     ]
+  },
+  {
+    name        = "tfc-aws-virtual-machine-dev",
+    description = "A workspace to managing shared networking objects in the dev environment"
+    tags        = ["demo", "aws", "application", "dev"]
+    auto_apply  = "true"
+    vcs_repo = {
+      identifier = "jamiewri/tfc-aws-virtual-machine"
+      branch     = "dev"
+    }
+    teams_access = [
+      {
+        name   = "developers"
+        access = "write"
+      },
+      {
+        name   = "managers"
+        access = "read"
+      }
+    ]
+  },
+  {
+    name        = "tfc-aws-virtual-machine-prod",
+    description = "A workspace to deploys a virtual machine in the prod environment"
+    tags        = ["demo", "aws", "application", "prod"]
+    auto_apply  = "true"
+    vcs_repo = {
+      identifier = "jamiewri/tfc-aws-virtual-machine"
+      branch     = "prod"
+    }
+    teams_access = [
+      {
+        name   = "developers"
+        access = "write"
+      },
+      {
+        name   = "managers"
+        access = "read"
+      }
+    ]
   }
 ]
 
