@@ -71,7 +71,7 @@ workspaces = [
     auto_apply  = "true"
     vcs_repo = {
       identifier = "jamiewri/tfc-aws-virtual-machine"
-      branch     = "prod"
+      branch     = "master"
     }
     teams_access = [
       {
