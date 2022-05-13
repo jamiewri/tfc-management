@@ -8,7 +8,22 @@ resource "tfe_variable_set" "dev" {
 resource "tfe_variable" "dev" {
   key             = "environement"
   value           = "{ environment = 'dev'}"
-  hcl = true
+  hcl             = true
+  category        = "terraform"
+  description     = "Sets the env"
+  variable_set_id = tfe_variable_set.dev.id
+}
+resource "tfe_variable_set" "prod" {
+  name         = "Prod Vars"
+  description  = "Variable set to be attached to each prod workspace"
+  global       = false
+  organization = var.organization
+}
+
+resource "tfe_variable" "prod" {
+  key             = "environement"
+  value           = "{ environment = 'prod'}"
+  hcl             = true
   category        = "terraform"
   description     = "Sets the env"
   variable_set_id = tfe_variable_set.dev.id

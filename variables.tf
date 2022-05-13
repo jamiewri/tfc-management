@@ -29,7 +29,7 @@ variable "workspaces" {
 
 variable "teams" {
   type = list(object({
-    name   = string
+    name = string
   }))
 
   default = []
