@@ -7,7 +7,7 @@ resource "tfe_variable_set" "dev" {
 
 resource "tfe_variable" "dev" {
   key             = "environement"
-  value           = "{ environment = 'dev'}"
+  value           = "{ environment = "dev"}"
   hcl = true
   category        = "terraform"
   description     = "Sets the env"
