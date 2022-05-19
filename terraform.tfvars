@@ -3,12 +3,12 @@
 #oauth_token_id = "ot-xxxxxxxxxxxxx"
 
 dev = {
-  environment  = "dev",
+  environment_code  = "dev",
   project_code = "jwr-1234"
 }
 
 prod = {
-  environment  = "prod",
+  environment_code  = "prod",
   project_code = "jwr-5678"
 }
 
