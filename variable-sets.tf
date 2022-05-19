@@ -34,8 +34,8 @@ resource "tfe_variable_set" "prod" {
 
 resource "tfe_variable" "prod" {
   key             = "environment"
- // value           = "{ environment = \"prod\"}"
- value            = var.prod
+  value           = "{ environment = \"prod\"}"
+ //value            = var.prod
   hcl             = true
   category        = "terraform"
   description     = "Sets the env"
