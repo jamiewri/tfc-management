@@ -34,3 +34,11 @@ variable "teams" {
 
   default = []
 }
+
+variable "dev" {
+  type = "map"
+}
+
+variable "prod" {
+  type = "map"
+}

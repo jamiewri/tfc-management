@@ -2,6 +2,16 @@
 #organization   = "organization-name"
 #oauth_token_id = "ot-xxxxxxxxxxxxx"
 
+dev = { 
+   environment = "dev",
+   project_code = "jwr-1234"
+}
+
+prod = {
+   environment = "prod",
+   project_code = "jwr-5678"
+}
+
 workspaces = [
   {
     name        = "tfc-aws-network-prod",
