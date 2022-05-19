@@ -6,7 +6,7 @@ data "tfe_workspace_ids" "dev" {
 
 
 resource "tfe_variable_set" "dev" {
-  name         = "Dev Vars"
+  name         = "Development variables"
   description  = "Variable set to be attached to each dev workspace"
   organization = var.organization
   workspace_ids = values(data.tfe_workspace_ids.dev.ids)
@@ -24,7 +24,7 @@ resource "tfe_variable" "dev" {
 
 // Prod Variables
 resource "tfe_variable_set" "prod" {
-  name         = "Prod Vars"
+  name         = "Production Variables"
   description  = "Variable set to be attached to each prod workspace"
   organization = var.organization
   workspace_ids = values(data.tfe_workspace_ids.prod.ids)
