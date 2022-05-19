@@ -36,9 +36,9 @@ variable "teams" {
 }
 
 variable "dev" {
-  type = "map"
+  type = map(string)
 }
 
 variable "prod" {
-  type = "map"
+  type = map(string)
 }
