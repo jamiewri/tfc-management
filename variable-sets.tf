@@ -1,8 +1,17 @@
+// Dev variables
+data "tfe_workspace_ids" "dev" {
+  tag_names        = ["dev"]
+  organization = var.organization
+}
+
+
 resource "tfe_variable_set" "dev" {
   name         = "Dev Vars"
   description  = "Variable set to be attached to each dev workspace"
   global       = false
   organization = var.organization
+  workspace_ids = values(data.tfe_workspace_ids.dev.ids)
+
 }
 
 resource "tfe_variable" "dev" {
@@ -13,11 +22,14 @@ resource "tfe_variable" "dev" {
   description     = "Sets the env"
   variable_set_id = tfe_variable_set.dev.id
 }
+
+// Prod Variables
 resource "tfe_variable_set" "prod" {
   name         = "Prod Vars"
   description  = "Variable set to be attached to each prod workspace"
   global       = false
   organization = var.organization
+  workspace_ids = values(data.tfe_workspace_ids.prod.ids)
 }
 
 resource "tfe_variable" "prod" {
@@ -27,4 +39,9 @@ resource "tfe_variable" "prod" {
   category        = "terraform"
   description     = "Sets the env"
   variable_set_id = tfe_variable_set.prod.id
+}
+
+data "tfe_workspace_ids" "prod" {
+  tag_names        = ["prod"]
+  organization = var.organization
 }
