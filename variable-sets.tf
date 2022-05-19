@@ -18,7 +18,6 @@ resource "tfe_variable" "dev" {
   key             = each.key
  // value           = "{ environment = \"dev\"}"
   value           = each.value
-  hcl             = true
   category        = "terraform"
   description     = "Sets the env"
   variable_set_id = tfe_variable_set.dev.id
