@@ -93,26 +93,6 @@ workspaces = [
         access = "read"
       }
     ]
-  },
-  {
-    name        = "tfc-servicenow-keepalive",
-    description = "Send hourly API request to ServiceNow developer instance to stop it being deleted."
-    tags        = ["demo", "servicenow", "management"]
-    auto_apply  = "true"
-    vcs_repo = {
-      identifier = "jamiewri/tfc-servicenow-keepalive"
-      branch     = "main"
-    }
-    teams_access = [
-      {
-        name   = "developers"
-        access = "write"
-      },
-      {
-        name   = "managers"
-        access = "read"
-      }
-    ]
   }
 ]
 
