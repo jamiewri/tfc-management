@@ -117,7 +117,7 @@ workspaces = [
   {
     name        = "tfc-credentials",
     description = "Takes AWS env args and saves them in variable sets."
-    tags        = ["management"]
+    tags        = ["management", "credentials"]
     auto_apply  = "true"
     vcs_repo = {
       identifier = "jamiewri/tfc-credentials"
