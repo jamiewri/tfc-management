@@ -113,6 +113,22 @@ workspaces = [
         access = "read"
       }
     ]
+  },
+  {
+    name        = "tfc-credentials",
+    description = "Takes AWS env args and saves them in variable sets.
+    tags        = ["management"]
+    auto_apply  = "true"
+    vcs_repo = {
+      identifier = "jamiewri/tfc-credentials"
+      branch     = "main"
+    }
+    teams_access = [
+      {
+        name   = "developers"
+        access = "write"
+      }
+    ]
   }
 ]
 
