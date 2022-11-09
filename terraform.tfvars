@@ -129,6 +129,22 @@ workspaces = [
         access = "write"
       }
     ]
+  },
+  {
+    name        = "tfc-gcp-kubernetes-cluster",
+    description = "Deploys a kubernetes cluster in to GCP"
+    tags        = ["gcp"]
+    auto_apply  = "true"
+    vcs_repo = {
+      identifier = "jamiewri/tfc-gcp-kubernetes-cluster"
+      branch     = "main"
+    }
+    teams_access = [
+      {
+        name   = "developers"
+        access = "write"
+      }
+    ]
   }
 ]
 
